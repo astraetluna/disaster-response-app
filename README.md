@@ -1,4 +1,4 @@
-# The Disaster Response App - Natural Language Processing with Machine Learning Pipelines
+# Disaster Response App - Natural Language Processing with Machine Learning Pipelines
 1. In this project, we analyze disaster data to build a model for an API that classifies new input data.
 A data set used to create a machine learning pipeline contains real messages that were sent during disaster events. The machine learning pipeline analyzes and categorizes these events, so that an emergency worker can input a new message and get classification results in several categories. The web app also displays some visualizations of the data.
 
@@ -12,10 +12,12 @@ A data set used to create a machine learning pipeline contains real messages tha
 
 # Project Components
 
-# Relevant Files
+## Most relevant files
 - `process_data.py` - ETL pipeline - writes a data cleaning pipeline that, loads the messages and categories datasets, merges the two datasets, cleans the data, stores it in a SQLite database
 - `train_classifier.py` -  Machine Learning Pipeline - Loads data from the SQLite database, splits the dataset into training and test sets, builds a text processing and machine learning pipeline, trains and tunes a model using GridSearchCV, outputs results on the test set, exports the final model as a pickle file
 - `run.py` - Flask Web App - Display visualization from the data, provides input field for messages from users and returns classification for categories of disaster events
+
+## Project structure
 
 ```
 - app
@@ -28,14 +30,14 @@ A data set used to create a machine learning pipeline contains real messages tha
 |- disaster_categories.csv  # data to process 
 |- disaster_messages.csv  # data to process
 |- process_data.py # ETL Pipeline
-|- DisasterResponse.db   # database to save clean data to
+|- DisasterResponse.db   # processed data saved to database
 
 - models
 |- train_classifier.py # ML Pipeline
 |- classifier.pkl  # saved model  - because of github limitations, you can downloaded it below
 
 - media
-|- demo.gif shows the demo of the browser app
+|- demo.gif #  demo of the browser app
 
 - README.md
 
@@ -55,6 +57,6 @@ A data set used to create a machine learning pipeline contains real messages tha
 3. Go to http://0.0.0.0:3001/
 
 
-### Licensing, Authors, and Acknowledgements
+# Licensing, Authors, and Acknowledgements
 ---
-Data comes frome [Figure-eight](https://www.figure-eight.com/). Thanks to [Udacity](https://www.udacity.com/courses/all) for creating a beautiful learning experience.  s
+Data comes frome [Figure-eight](https://www.figure-eight.com/). Thanks to [Udacity](https://www.udacity.com/courses/all) for creating a beautiful learning experience. 
