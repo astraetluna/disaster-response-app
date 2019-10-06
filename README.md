@@ -1,16 +1,22 @@
-# About The Disaster Response Pipeline Project
-In this project, we analyze disaster data from a database Figure Eight to build a model for an API that classifies disaster messages.
+# The Disaster Response App - Natural Language Processing with Machine Learning Pipelines
+1. In this project, we analyze disaster data to build a model for an API that classifies new input data.
+A data set used to create a machine learning pipeline contains real messages that were sent during disaster events. The machine learning pipeline analyzes and categorizes these events, so that an emergency worker can input a new message and get classification results in several categories. The web app also displays some visualizations of the data.
 
-A data set used to create a machine learning pipeline contains real messages that were sent during disaster events. The machine learning pipeline analyzes and categorizes these events, so that an emergency worker can input a new message and get classification results in several categories. 
-
-TODO: The web app will also display visualizations of the data. This project will show off your software skills, including your ability to create basic data pipelines and write clean, organized code!
-
-
+2. The following demo shows, how the app works:  
+<div style = "display: flex; justify-content: center">
 <img src='media/demo.gif' width="785" height="368" />
+</div>
+
 <br>
 
 
 # Project Components
+
+# Relevant Files
+- `process_data.py` - ETL pipeline - writes a data cleaning pipeline that, loads the messages and categories datasets, merges the two datasets, cleans the data, stores it in a SQLite database
+- `train_classifier.py` -  Machine Learning Pipeline - Loads data from the SQLite database, splits the dataset into training and test sets, builds a text processing and machine learning pipeline, trains and tunes a model using GridSearchCV, outputs results on the test set, exports the final model as a pickle file
+- `run.py` - Flask Web App - Display visualization from the data, provides input field for messages from users and returns classification for categories of disaster events
+
 ```
 - app
 | - template
@@ -21,43 +27,21 @@ TODO: The web app will also display visualizations of the data. This project wil
 - data
 |- disaster_categories.csv  # data to process 
 |- disaster_messages.csv  # data to process
-|- process_data.py
-|- InsertDatabaseName.db   # database to save clean data to
+|- process_data.py # ETL Pipeline
+|- DisasterResponse.db   # database to save clean data to
 
 - models
-|- train_classifier.py
-|- classifier.pkl  # saved model 
+|- train_classifier.py # ML Pipeline
+|- classifier.pkl  # saved model  - because of github limitations, you can downloaded it below
+
+- media
+|- demo.gif shows the demo of the browser app
 
 - README.md
 
 ```
 
-
-
-
-
-- 'app'
-    - 'template'
-        - 'master.html' 
-        - 'go.html' 
-    - 'run.py'  
-    - 'utils.py' 
-
-- 'data'
-  - `disaster_categories.csv`+
-  - `disaster_messages.csv`´
-  - `process_data.py` (ETL Pipeline: write a data cleaning pipeline that, loads the messages and categories datasets, merges the two datasets, cleans the data, stores it in a SQLite database)
-  - `DisasterResponse.db` 
-
-- `models`
-  - `train_classifier.py`
-  - `utils.py`
-  - `train_classifier.py` ML Pipeline: Loads data from the SQLite database, splits the dataset into training and test sets, builds a text processing and machine learning pipeline, trains and tunes a model using GridSearchCV, outputs results on the test set, exports the final model as a pickle file
-  - `classifier.pkl`
-
-- `README.md`
-
-### Instructions:
+# Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
 
     - To run ETL pipeline that cleans data and stores in database
@@ -69,3 +53,8 @@ TODO: The web app will also display visualizations of the data. This project wil
     `python run.py`
 
 3. Go to http://0.0.0.0:3001/
+
+
+### Licensing, Authors, and Acknowledgements
+---
+Data comes frome [Figure-eight](https://www.figure-eight.com/). Thanks to [Udacity](https://www.udacity.com/courses/all) for creating a beautiful learning experience.  s
