@@ -16,6 +16,7 @@ A data set used to create a machine learning pipeline contains real messages tha
 - `process_data.py` - ETL pipeline - writes a data cleaning pipeline that, loads the messages and categories datasets, merges the two datasets, cleans the data, stores it in a SQLite database
 - `train_classifier.py` -  Machine Learning Pipeline - Loads data from the SQLite database, splits the dataset into training and test sets, builds a text processing and machine learning pipeline, trains and tunes a model using GridSearchCV, outputs results on the test set, exports the final model as a pickle file
 - `run.py` - Flask Web App - Display visualization from the data, provides input field for messages from users and returns classification for categories of disaster events
+- `classifier.pkl` - final model, which can be downloaded from [here](https://1drv.ms/u/s!AjI9m5VTVpPOhZ8dC88M0K1Hkq8nCw?e=uewmc1) because of github 100 MB upload limit.
 
 ## Project structure
 
@@ -34,7 +35,7 @@ A data set used to create a machine learning pipeline contains real messages tha
 
 - models
 |- train_classifier.py # ML Pipeline
-|- classifier.pkl  # saved model  - because of github limitations, you can downloaded it below
+|- classifier.pkl  # saved model  - because of github upload limit < 100 MB, you can downloaded it above 
 
 - media
 |- demo.gif #  demo of the browser app
@@ -58,5 +59,5 @@ A data set used to create a machine learning pipeline contains real messages tha
 
 
 # Licensing, Authors, and Acknowledgements
----
+
 Data comes frome [Figure-eight](https://www.figure-eight.com/). Thanks to [Udacity](https://www.udacity.com/courses/all) for creating a beautiful learning experience. 
