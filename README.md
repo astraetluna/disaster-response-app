@@ -1,11 +1,41 @@
 # About The Disaster Response Pipeline Project
-In this project, we analyze disaster data from Figure Eight to build a model for an API that classifies disaster messages.
+In this project, we analyze disaster data from a database Figure Eight to build a model for an API that classifies disaster messages.
 
 A data set used to create a machine learning pipeline contains real messages that were sent during disaster events. The machine learning pipeline analyzes and categorizes these events, so that an emergency worker can input a new message and get classification results in several categories. 
 
 TODO: The web app will also display visualizations of the data. This project will show off your software skills, including your ability to create basic data pipelines and write clean, organized code!
 
+
+<img src='media/demo.gif' width="785" height="368" />
+<br>
+
+
 # Project Components
+```
+- app
+| - template
+| |- master.html  # main page of web app
+| |- go.html  # classification result page of web app
+|- run.py  # Flask file that runs app
+
+- data
+|- disaster_categories.csv  # data to process 
+|- disaster_messages.csv  # data to process
+|- process_data.py
+|- InsertDatabaseName.db   # database to save clean data to
+
+- models
+|- train_classifier.py
+|- classifier.pkl  # saved model 
+
+- README.md
+
+```
+
+
+
+
+
 - 'app'
     - 'template'
         - 'master.html' 
